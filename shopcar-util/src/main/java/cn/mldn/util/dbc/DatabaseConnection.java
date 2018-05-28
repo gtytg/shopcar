@@ -17,6 +17,7 @@ public class DatabaseConnection {
 	}
 	public static Connection getConnection() {
 		Connection conn = THREAD_LOCAL.get() ;
+		System.out.println("add a comments");
 		if (conn == null) {
 			try {
 				conn = rebuildConnection() ;
